@@ -126,7 +126,7 @@ class Uporabnik {
         if ($stmt = mysqli_prepare($db, "UPDATE user SET uporabnisko_ime=?, geslo=?, email=? WHERE id=?")) {
             //dodamo parametre po vrsti namesto vprašajev
             //s string, i integer ,d double, b blob
-            mysqli_stmt_bind_param($stmt, "ssss",$data['uporabnisko_ime'],$data['geslo'] , $data['email'], $data['id']);
+            mysqli_stmt_bind_param($stmt, "sssi",$data['uporabnisko_ime'],$data['geslo'] , $data['email'], $data['id']);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
