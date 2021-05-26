@@ -58,33 +58,14 @@
               </li>
             </ul>
               <!-- desni meni z opcijami za prijavo in registracijo in fotnawesome ikonami v znački i -->
-              <?php
-              if(isset($_SESSION["USER_ID"])){
-                  ?>
                   <ul class="navbar-nav ml-auto">
                       <li style="margin-top:7px;">
-                          <?php $user_id = $_SESSION["USER_ID"];
-                          global $conn;
-                          $query = "SELECT username FROM uporabniki WHERE id = '$user_id'";
-                          $result = $conn->query($query);
-                          if($obj = $result->fetch_object()){
-                              echo $obj->username;
-                          }
-                          ?>
                       </li>
                       <li class="nav-item"><a  class="nav-link" href="?controller=uporabniki&action=odjavi"><i class="fas fa-user"></i>Odjava</a></li>
                   </ul>
-                  <?php
-              }
-
-              else{
-                  ?>
                   <ul class="navbar-nav ml-auto">
                       <li class="nav-item"><a class="nav-link"  href="?controller=uporabniki&action=prijava"><i class="fas fa-sign-in-alt"></i> Prijava</a></li>
                   </ul>
-                  <?php
-              }
-              ?>
           </div>
         </nav>
 
