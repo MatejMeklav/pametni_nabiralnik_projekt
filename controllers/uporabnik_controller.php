@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 //kontroler za delo z uporabniki
 class uporabnik_controller {
@@ -53,7 +54,7 @@ class uporabnik_controller {
 
             else if(Uporabnik::registracija($_POST["uporabnisko_ime"], $_POST["geslo"], $_POST["email"])){
                 //TODO pogled po registraciji
-                //require_once('views/strani/domov.php');
+                require_once('views/strani/domov.php');
             }
             //Prišlo je do napake pri registraciji
             else{
@@ -61,8 +62,7 @@ class uporabnik_controller {
             }
 
         }else{
-            //TODO: Registracija pogled
-           // require_once('views/uporabnik/register.php');
+           require_once('views/uporabniki/registracija.php');
         }
 
 
@@ -77,15 +77,16 @@ class uporabnik_controller {
 
     //ko je oglas dodan, imamo v $oglas podatke o tem novem oglasu
     //uporabniku lahko pokažemo pogled, ki ga bo obvestil o uspešnosti oddaje oglasa
-      require_once('views/oglasi/uspesnoDodal.php');
+      //require_once('views/oglasi/uspesnoDodal.php');
     }
 
     public function prijava(){
 
-        require_once('views/uporabniki/prijava.php');
+      require_once('views/uporabniki/prijava.php');
     }
 
 
 
-  }
-  ?>
+}
+ob_end_flush();
+?>

@@ -110,7 +110,7 @@ class Uporabnik {
     public static function uporabnik_obstaja ($username){
         $db =Db::getInstance();
         $username = mysqli_real_escape_string($db, $username);
-        $result = mysqli_query($db,"SELECT * FROM user WHERE username='".$username."'");
+        $result = mysqli_query($db,"SELECT * FROM uporabnik WHERE uporabnisko_ime='".$username."'");
         $row = mysqli_fetch_assoc($result);
         if(!$row){
             return false;
@@ -123,7 +123,7 @@ class Uporabnik {
     public static function posodobi($data){
         $db = Db::getInstance();
 
-        if ($stmt = mysqli_prepare($db, "UPDATE user SET uporabnisko_ime=?, geslo=?, email=? WHERE id=?")) {
+        if ($stmt = mysqli_prepare($db, "UPDATE uporabnik SET uporabnisko_ime=?, geslo=?, email=? WHERE id=?")) {
             //dodamo parametre po vrsti namesto vprašajev
             //s string, i integer ,d double, b blob
             mysqli_stmt_bind_param($stmt, "sssi",$data['uporabnisko_ime'],$data['geslo'] , $data['email'], $data['id']);
@@ -135,7 +135,7 @@ class Uporabnik {
     public static function izbrisi($id){
         $id_uporabnik = intval($id);
         $db = Db::getInstance();
-        $result = mysqli_query($db,"DELETE FROM user WHERE id=$id_uporabnik");
+        $result = mysqli_query($db,"DELETE FROM uporabnik WHERE id=$id_uporabnik");
         //result, lahko preverimo uspešnost poizvedbe;
     }
 

@@ -26,8 +26,8 @@ function call($controller, $action) {
   //Na tem mestu bi lahko dodamo tudi avtentikacijo (preverjamo, če je uporabnik v seji) in avtorizacijo
   //slednje bi storili tako, da bi imeli več array-ev, recimo array z admin kontrolerji in akcijami in array z public akcijami
 $controllers = array('strani' => ['domov', 'napaka'],
- 'Uporabnik' => ['index', 'prikazi','dodaj','shrani', 'registracija','prijava'],
-    'Nabiralnik' => ['index', 'prikazi','dodaj','shrani']);
+ 'uporabnik' => ['index', 'prikazi','dodaj','shrani', 'registracija','prijava'],
+    'nabiralnik' => ['index', 'prikazi','dodaj','shrani']);
 
 
   //preverimo, če uporabnik kliče kontorler, ki sploh obstaja, torej je v našem seznamu dovoljenih klicev
@@ -40,8 +40,10 @@ if (array_key_exists($controller, $controllers)) {
   }
   else {
     call('strani', 'napaka');
+
   }
 } else {
   call('strani', 'napaka');
+
 }
 ?>

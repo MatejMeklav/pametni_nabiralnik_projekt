@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
           <!-- Naslov na meniju -->
-          <a class="navbar-brand" href="#">MVC Primer</a>
+          <a class="navbar-brand" href="#">Pametni paketnik</a>
 
           <!-- gumb, ki se pojavi, ko se meni zaradi širine zaslona skrije, in omogoča vertikalno razširitev menija -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,37 +34,28 @@
             <ul class="navbar-nav mr-auto">
              
               <!-- primer označevanja aktivnih elementov v meniju, ko je opcija/kontroler izbran -->
-              <li class="nav-item <?php if($controller!='oglasi') echo("active");?>">
-                <a class="nav-link" href="index.php">Domov </a>
+              <li class="nav-item">
+                <a class="nav-link" href="index.php">Domov</a>
               </li>
               <!-- primer označevanja aktivnih elementov v meniju, ko je opcija/kontroler izbran -->
-              <li class="nav-item <?php if($controller=='oglasi') echo("active");?>">
-                <a class="nav-link" href="?controller=oglasi&action=index">Oglasi</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown
-                </a>
-                <!-- primer spustnega menija znotraj menija -->
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Nekaj	</a>
-                  <a class="dropdown-item" href="#">Nekaj drugega</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Druga opcija</a>
-                </div>
-              </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" href="#">Seznam uporabnikov</a>
               </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Seznam uporabnikov</a>
+                </li>
             </ul>
               <!-- desni meni z opcijami za prijavo in registracijo in fotnawesome ikonami v znački i -->
                   <ul class="navbar-nav ml-auto">
                       <li style="margin-top:7px;">
                       </li>
-                      <li class="nav-item"><a  class="nav-link" href="?controller=uporabniki&action=odjavi"><i class="fas fa-user"></i>Odjava</a></li>
+                      <li class="nav-item"><a  class="nav-link" href="#"><i class="fas fa-user"></i>Odjava</a></li>
                   </ul>
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link"  href="?controller=uporabnik&action=registracija"><i class="fas fa-sign-in-alt"></i> Registracija</a></li>
+              </ul>
                   <ul class="navbar-nav ml-auto">
-                      <li class="nav-item"><a class="nav-link"  href="?controller=uporabniki&action=prijava"><i class="fas fa-sign-in-alt"></i> Prijava</a></li>
+                      <li class="nav-item"><a class="nav-link"  href="?controller=uporabnik&action=prijava"><i class="fas fa-sign-in-alt"></i> Prijava</a></li>
                   </ul>
           </div>
         </nav>
@@ -81,7 +72,7 @@
 
             <!-- tukaj se bo vključevala koda pogledov, ki jih bodo nalagali kontrolerji -->
             <!-- klic akcije iz routes bo na tem mestu zgeneriral html kodo, ki bo zalepnjena v našo predlogo -->
-            <?php require_once('routes.php'); ?> 
+            <?php require_once('routes.php'); ?>
 
 
 
@@ -98,7 +89,7 @@
       </div>
 
       <footer class="container text-center">
-        <p>Moji oglasi - MVC primer</p>
+        <p>Pametni paketnik, vse pravice pridržane.</p>
       </footer>
       <body>
         </html>
