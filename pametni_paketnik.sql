@@ -78,7 +78,8 @@ CREATE TABLE IF NOT EXISTS `uporabnik` (
   `uporabnisko_ime` varchar(45) COLLATE utf8_slovenian_ci NOT NULL,
   `geslo` varchar(45) COLLATE utf8_slovenian_ci NOT NULL,
   `email` varchar(45) COLLATE utf8_slovenian_ci NOT NULL,
-  PRIMARY KEY (`id`)
+   `vloga` varchar(45) COLLATE utf8_slovenian_ci NOT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
 COMMIT;
 

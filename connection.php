@@ -1,5 +1,10 @@
 <?php
 
+//Poveži se z bazo
+$conn = new mysqli('localhost', 'root', '', 'pametni_paketnik');
+//Nastavi kodiranje znakov, ki se uporablja pri komunikaciji z bazo
+$conn->set_charset("UTF8");
+
 //razred, ki ima statično spremenljivko, s povezavo na bazo
   class Db {
     private static $instance = NULL;
@@ -10,7 +15,7 @@
     public static function getInstance() {
       if (!isset(self::$instance)) {
        
-        self::$instance = mysqli_connect("localhost", "root", "root", "pametni_paketnik");
+        self::$instance = mysqli_connect("localhost", "root", "", "pametni_paketnik");
       }
       return self::$instance;
     }

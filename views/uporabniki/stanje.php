@@ -1,3 +1,46 @@
+<?php
+function get_all()
+{
+    global $conn;
+
+    $query = "SELECT * 
+				  FROM uporabnik 
+				  ORDER BY uporabnisko_ime;";
+
+    $res = $conn->query($query);
+    $uporabniki = array();
+
+    while($user = $res->fetch_object())
+    {
+        array_push($uporabniki, $user);
+    }
+
+    return $uporabniki;
+}
+function get_user($id)
+{
+    global $conn;
+    $id = mysqli_real_escape_string($conn, $id);
+
+    $query = "SELECT *
+				  FROM uporabnik 
+				  WHERE id = $id";
+
+    $res = $conn->query($query);
+
+    if($obj = $res->fetch_object())
+    {
+        return $obj;
+    }
+
+    return null;
+}
+$uporabniki = get_all();
+$id = $_SESSION["USER_ID"];
+$uporabnik = get_user($id);
+
+?>
+
 <a href="?controller=uporabnik&action=add" class="btn btn-success"><i class="fas fa-user-plus"></i> Dodaj uporabnika</a>
 
 <div class="table-responsive">
@@ -5,13 +48,9 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Up. ime</th>
-                <th>Naslov</th>
-                <th>Pošta</th>
+                <th>Uporabniško ime</th>
                 <th>E-mail</th>
-                <th>Telefon</th>
-                <th>Spol</th>
-                <th>Admin</th>
+                <th>Vloga</th>
                 <th>&nbsp;</th>
             </tr>
         </thead>
@@ -19,19 +58,13 @@
             <?php foreach($uporabniki as $uporabnik) { ?>
                 <tr>
                     <td><?php echo $uporabnik->id; ?></td>
-                    <td><?php echo $uporabnik->username; ?></td>
-                    <td><?php echo $uporabnik->address; ?></td>
-                    <td><?php echo $uporabnik->post; ?></td>
+                    <td><?php echo $uporabnik->uporabnisko_ime; ?></td>
                     <td><?php echo $uporabnik->email; ?></td>
-                    <td><?php echo $uporabnik->phone; ?></td>
-                    <td><?php echo $uporabnik->gender; ?></td>
-                    <td><?php echo ($uporabnik->admin) ? 'Administrator' : 'Uporabnik'; ?></td>
+                    <td><?php echo $uporabnik->vloga; ?></td>
                     <td>
                         <a href="?controller=uporabnik&action=edit&user_id=<?php echo $uporabnik->id; ?>" class="btn btn-success"><i class="fa fa-pencil-square"></i> Uredi</a>
                         <a  data-toggle="modal" data-target="#myModal" class="btn btn-danger"><i class="fas fa-user-times"></i> Odstrani</a>
-                        <button type="button" class="btn btn-primary">
-                            Število oglasov <span class="badge badge-light"><?php print_r($ids[$uporabnik->id]); ?></span>
-                        </button>
+
                     </td>
                 </tr>
             <?php } ?>

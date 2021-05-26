@@ -107,6 +107,10 @@ class uporabnik_controller {
         require_once('views/uporabniki/prijava.php');
     }
 
+    public function stanje() {
+      require_once('views/uporabniki/stanje.php');
+    }
+
 
 
 }
