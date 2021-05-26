@@ -80,6 +80,11 @@ class uporabnik_controller {
       require_once('views/oglasi/uspesnoDodal.php');
     }
 
+    public function prijava(){
+
+        require_once('views/uporabniki/prijava.php');
+    }
+
 
 
   }

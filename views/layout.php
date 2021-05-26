@@ -60,7 +60,7 @@
             <!-- desni meni z opcijami za prijavo in registracijo in fotnawesome ikonami v znački i -->
             <ul class="navbar-nav ml-auto">
               <li class="nav-item"><a  class="nav-link" href="#"><i class="fas fa-user"></i> Registracija</a></li>
-              <li class="nav-item"><a class="nav-link"  href="#"><i class="fas fa-sign-in-alt"></i> Prijava</a></li>
+              <li class="nav-item"><a class="nav-link"  href="?controller=uporabnik&action=prijava"><i class="fas fa-sign-in-alt"></i> Prijava</a></li>
             </ul>
           </div>
         </nav>
