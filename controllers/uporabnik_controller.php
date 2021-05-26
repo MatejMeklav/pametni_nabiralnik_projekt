@@ -110,6 +110,9 @@ class uporabnik_controller {
     public function stanje() {
       require_once('views/uporabniki/stanje.php');
     }
+    public function stanj2() {
+        require_once('views/uporabniki/stanje.php');
+    }
 
     public function huhuhaha() {
       echo hehahahhahehahahHAHAHAHAH;
