@@ -41,7 +41,7 @@ $uporabnik = get_user($id);
 
 ?>
 
-<a href="?controller=uporabnik&action=add" class="btn btn-success"><i class="fas fa-user-plus"></i> Dodaj uporabnika</a>
+<!-- <a href="?controller=uporabnik&action=add" class="btn btn-success"><i class="fas fa-user-plus"></i> Dodaj uporabnika</a> -->
 
 <div class="table-responsive">
     <table class="table">
@@ -62,8 +62,9 @@ $uporabnik = get_user($id);
                     <td><?php echo $uporabnik->email; ?></td>
                     <td><?php echo $uporabnik->vloga; ?></td>
                     <td>
-                        <a href="?controller=uporabnik&action=edit&user_id=<?php echo $uporabnik->id; ?>" class="btn btn-success"><i class="fa fa-pencil-square"></i> Uredi</a>
-                        <a  data-toggle="modal" data-target="#myModal" class="btn btn-danger"><i class="fas fa-user-times"></i> Odstrani</a>
+                                <!-- TODO: link na dodaj paketnik -->
+                        <a href="?controller=Nabiralni&action=dodaj&user_id=<?php echo $uporabnik->id; ?>" class="btn btn-success"><i class="fa fa-pencil-square"></i> dodaj nabiralnik</a>
+                        <a  data-toggle="modal" data-target="#myModal" class="btn btn-danger"><i class="fas fa-user-times"></i> Odstrani uporabnika</a>
 
                     </td>
                 </tr>

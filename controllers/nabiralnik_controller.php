@@ -29,7 +29,7 @@ class nabiralnik_controller {
     //dodajanje nabiralnika, prikaz
     public function dodaj() {
         //TODO: Prikaz vmesnika za dodajanje nabiralnika
-        //require_once('views/oglasi/dodaj.php');
+        //require_once('views/nabiralnik/dodaj.php');
     }
 
     //akcija shrani, pričakuje, da bo uporabnik poleg informacije o želeni akciji, preko POST metode, poslal tudi dva podatka - id_uporabnika in ime
