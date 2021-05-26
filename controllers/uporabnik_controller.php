@@ -91,8 +91,7 @@ class uporabnik_controller {
             if($uporabnik){
                 $_SESSION['uporabnik_id']=$uporabnik->id;
                 $_SESSION['uporabnisko_ime']=$uporabnik->uporabnisko_ime;
-                require_once ('views/layout.php');
-                require_once('views/strani/domov.php');
+                header("Location: index.php");
 
             }else{
                 $data['error']="Uporabnik s tem uporabniškim imenom in geslom ne obstaja";
@@ -106,6 +105,10 @@ class uporabnik_controller {
         session_destroy();
         require_once ('views/layout.php');
         require_once('views/uporabniki/prijava.php');
+    }
+
+    public function stanje() {
+      require_once('views/uporabniki/stanje.php');
     }
 
 

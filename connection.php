@@ -10,7 +10,7 @@
     public static function getInstance() {
       if (!isset(self::$instance)) {
        
-        self::$instance = mysqli_connect("localhost", "root", "", "pametni_paketnik");
+        self::$instance = mysqli_connect("localhost", "root", "root", "pametni_paketnik");
       }
       return self::$instance;
     }

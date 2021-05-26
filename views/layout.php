@@ -39,10 +39,10 @@
               </li>
               <!-- primer označevanja aktivnih elementov v meniju, ko je opcija/kontroler izbran -->
               <li class="nav-item">
-                <a class="nav-link" href="#">Seznam uporabnikov</a>
+                <a class="nav-link" href="?controller=uporabnik&action=stanje">Seznam uporabnikov</a>
               </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Seznam uporabnikov</a>
+                    <a class="nav-link" href="#">Seznam paketnikov</a>
                 </li>
             </ul>
               <?php if(isset($_SESSION['uporabnik_id'])){?>
