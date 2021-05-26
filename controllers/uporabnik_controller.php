@@ -45,20 +45,23 @@ class uporabnik_controller {
             //Preveri če se gesli ujemata
             if($_POST["geslo"] != $_POST["ponovi_geslo"]){
                 $error = "Gesli se ne ujemata.";
+                require_once('views/strani/neuspešnaRegistracija.php');
             }
             //Preveri ali uporabniško ime obstaja
             else if(Uporabnik::uporabnik_obstaja($_POST["uporabnisko_ime"])){
                 $error = "Uporabniško ime je že zasedeno.";
+                require_once('views/strani/neuspešnaRegistracija.php');
             }
             //Podatki so pravilno izpolnjeni, registriraj uporabnika
 
             else if(Uporabnik::registracija($_POST["uporabnisko_ime"], $_POST["geslo"], $_POST["email"])){
-                //TODO pogled po registraciji
-                require_once('views/strani/domov.php');
+                require_once('views/strani/registracijaOdziv.php');
             }
             //Prišlo je do napake pri registraciji
             else{
                 $error = "Prišlo je do napake med registracijo uporabnika.";
+                require_once('views/strani/neuspešnaRegistracija.php');
+
             }
 
         }else{
@@ -81,8 +84,28 @@ class uporabnik_controller {
     }
 
     public function prijava(){
+        $data=array();
+        if(isset($_POST['uporabnisko_ime']) && isset($_POST['geslo']) ){
 
-      require_once('views/uporabniki/prijava.php');
+            $uporabnik=Uporabnik::prijava($_POST['uporabnisko_ime'],$_POST['geslo']);
+            if($uporabnik){
+                $_SESSION['uporabnik_id']=$uporabnik->id;
+                $_SESSION['uporabnisko_ime']=$uporabnik->uporabnisko_ime;
+                require_once ('views/layout.php');
+                require_once('views/strani/domov.php');
+
+            }else{
+                $data['error']="Uporabnik s tem uporabniškim imenom in geslom ne obstaja";
+            }
+        }else{
+            require_once('views/uporabniki/prijava.php');
+        }
+    }
+
+    public function odjava() {
+        session_destroy();
+        require_once ('views/layout.php');
+        require_once('views/uporabniki/prijava.php');
     }
 
 

@@ -15,25 +15,25 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                     </div>
-                    <input name="uporabnisko_ime" class="form-control" placeholder="Uporabniško ime" type="text">
+                    <input name="uporabnisko_ime" class="form-control" placeholder="Uporabniško ime" type="text" required>
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                     </div>
-                    <input name="email" class="form-control" placeholder="Email naslov" type="email">
+                    <input name="email" class="form-control" placeholder="Email naslov" type="email" required>
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                     </div>
-                    <input name="geslo" class="form-control" placeholder="Ustvarite geslo" type="password">
+                    <input name="geslo" class="form-control" placeholder="Ustvarite geslo" type="password" required>
                 </div> <!-- form-group// -->
                 <div class="form-group input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                     </div>
-                    <input class="form-control" name="ponovi_geslo" placeholder="Ponovite geslo" type="password">
+                    <input class="form-control" name="ponovi_geslo" placeholder="Ponovite geslo" type="password" required>
                 </div> <!-- form-group// -->
                 <div class="form-group">
                     <button type="submit" name="poslji" class="btn btn-primary btn-block"> Ustvarite račun  </button>

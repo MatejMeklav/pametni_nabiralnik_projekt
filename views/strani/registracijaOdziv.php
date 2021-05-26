@@ -1,0 +1,1 @@
+<p>Registracija uspešna!</p>

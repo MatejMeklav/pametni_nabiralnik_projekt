@@ -139,6 +139,5 @@ class Uporabnik {
         //result, lahko preverimo uspešnost poizvedbe;
     }
 
-
 }
 ?>

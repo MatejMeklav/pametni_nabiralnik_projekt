@@ -18,6 +18,7 @@ if (isset($_GET['controller']) && isset($_GET['action'])) {
 	$controller = 'strani';
 	$action     = 'domov';
 }
+session_start();
 
 //vključimo layout, torej splošni izgled strani
 //v njem, bomo pa vključili usmerjevalnik, ki bo iz spremenljivk $controller in $action poklical ustrezne funkcije

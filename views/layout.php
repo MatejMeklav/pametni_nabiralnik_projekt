@@ -45,19 +45,23 @@
                     <a class="nav-link" href="#">Seznam uporabnikov</a>
                 </li>
             </ul>
-              <!-- desni meni z opcijami za prijavo in registracijo in fotnawesome ikonami v znački i -->
-                  <ul class="navbar-nav ml-auto">
-                      <li style="margin-top:7px;">
-                      </li>
-                      <li class="nav-item"><a  class="nav-link" href="#"><i class="fas fa-user"></i>Odjava</a></li>
-                  </ul>
+              <?php if(isset($_SESSION['uporabnik_id'])){?>
+              <ul class="navbar-nav ml-auto">
+                  <li style="margin-top:7px;">
+                  </li>
+                  <li class="nav-item"><a  class="nav-link" href="?controller=uporabnik&action=odjava"><i class="fas fa-user"></i>Odjava</a></li>
+              </ul>
+              <?php
+              }else{?>
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item"><a class="nav-link"  href="?controller=uporabnik&action=registracija"><i class="fas fa-sign-in-alt"></i> Registracija</a></li>
               </ul>
-                  <ul class="navbar-nav ml-auto">
-                      <li class="nav-item"><a class="nav-link"  href="?controller=uporabnik&action=prijava"><i class="fas fa-sign-in-alt"></i> Prijava</a></li>
-                  </ul>
-          </div>
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item"><a class="nav-link"  href="?controller=uporabnik&action=prijava"><i class="fas fa-sign-in-alt"></i> Prijava</a></li>
+              </ul>
+          </div><?php
+
+              }?>
         </nav>
 
         <!-- naredimo mrežo kjer ima sredinski element širino 8, ostala dva pa vzameta preostalo širino  -->

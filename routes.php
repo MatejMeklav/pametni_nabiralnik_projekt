@@ -26,7 +26,7 @@ function call($controller, $action) {
   //Na tem mestu bi lahko dodamo tudi avtentikacijo (preverjamo, če je uporabnik v seji) in avtorizacijo
   //slednje bi storili tako, da bi imeli več array-ev, recimo array z admin kontrolerji in akcijami in array z public akcijami
 $controllers = array('strani' => ['domov', 'napaka'],
- 'uporabnik' => ['index', 'prikazi','dodaj','shrani', 'registracija','prijava'],
+ 'uporabnik' => ['index', 'prikazi','dodaj','shrani', 'registracija','prijava','odjava'],
     'nabiralnik' => ['index', 'prikazi','dodaj','shrani']);
 
 
