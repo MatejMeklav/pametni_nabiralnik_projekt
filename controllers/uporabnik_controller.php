@@ -111,6 +111,10 @@ class uporabnik_controller {
       require_once('views/uporabniki/stanje.php');
     }
 
+    public function huhuhaha() {
+      echo hehahahhahehahahHAHAHAHAH;
+    }
+
 
 
 }
