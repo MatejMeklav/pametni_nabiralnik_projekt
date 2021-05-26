@@ -46,21 +46,25 @@ class uporabnik_controller {
             if($_POST["geslo"] != $_POST["ponovi_geslo"]){
                 $error = "Gesli se ne ujemata.";
                 require_once('views/strani/neuspešnaRegistracija.php');
+                die();
             }
             //Preveri ali uporabniško ime obstaja
             else if(Uporabnik::uporabnik_obstaja($_POST["uporabnisko_ime"])){
                 $error = "Uporabniško ime je že zasedeno.";
                 require_once('views/strani/neuspešnaRegistracija.php');
+                die();
             }
             //Podatki so pravilno izpolnjeni, registriraj uporabnika
 
             else if(Uporabnik::registracija($_POST["uporabnisko_ime"], $_POST["geslo"], $_POST["email"])){
                 require_once('views/strani/registracijaOdziv.php');
+                die();
             }
             //Prišlo je do napake pri registraciji
             else{
                 $error = "Prišlo je do napake med registracijo uporabnika.";
                 require_once('views/strani/neuspešnaRegistracija.php');
+                die();
 
             }
 
