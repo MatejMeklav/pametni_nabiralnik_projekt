@@ -17,7 +17,7 @@ function get_all()
 
     return $uporabniki;
 }
-function get_user($id)
+function get_box($id)
 {
     global $conn;
     $id = mysqli_real_escape_string($conn, $id);
@@ -36,8 +36,8 @@ function get_user($id)
     return null;
 }
 $uporabniki = get_all();
-$id = $_SESSION["USER_ID"];
-$uporabnik = get_user($id);
+$id = $_SESSION["uporabnik_id"];
+$uporabnik = get_box($id);
 
 ?>
 

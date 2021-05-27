@@ -43,5 +43,12 @@ class nabiralnik_controller {
         //TODO pogled po uspešni shrambi nabiralnika
         //require_once('views/oglasi/uspesnoDodal.php');
     }
+
+    public function seznam() {
+        //pridobimo vse nabiralnike
+        //$nabiralniki = Nabiralnik::vsi();
+
+        require_once('views/paketniki/seznam.php');
+      }
 }
 ?>

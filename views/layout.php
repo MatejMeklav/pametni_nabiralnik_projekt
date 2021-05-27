@@ -42,7 +42,7 @@
                 <a class="nav-link" href="?controller=uporabnik&action=stanje">Seznam uporabnikov</a>
               </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Seznam paketnikov</a>
+                    <a class="nav-link" href="?controller=nabiralnik&action=seznam">Seznam paketnikov</a>
                 </li>
             </ul>
               <?php if(isset($_SESSION['uporabnik_id'])){?>
