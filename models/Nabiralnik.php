@@ -49,6 +49,15 @@ class Nabiralnik {
         return new Nabiralnik($row['id'], $row['id_uporabnik'], $row['ime']);
     }
 
+    public static function najdi_ime($name) {
+
+        $ime =strval($name);
+        $db = Db::getInstance();
+        $result = mysqli_query($db,"SELECT * FROM nabiralnik where nabiralnik.ime='$ime'");
+        $row = mysqli_fetch_assoc($result);
+        return new Nabiralnik($row['id'], $row['id_uporabnik'], $row['ime']);
+    }
+
 
     //metoda, ki doda nov nabiralnik v bazo
 

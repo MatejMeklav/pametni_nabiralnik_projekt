@@ -1,5 +1,5 @@
 <?php
-
+include "models/odpiranje.php";
 //kontroler za delo z nabiralniki
 class nabiralnik_controller {
 
@@ -49,6 +49,13 @@ class nabiralnik_controller {
         //$nabiralniki = Nabiralnik::vsi();
 
         require_once('views/paketniki/seznam.php');
+      }
+
+      public function prikazi_dostope(){
+
+        $dostopi = Odpiranje::vrniVseZidUporabnika($_SESSION['uporabnik_id']);
+          require_once('views/paketniki/dnevnikDostopa.php');
+
       }
 }
 ?>

@@ -44,6 +44,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="?controller=nabiralnik&action=seznam">Seznam paketnikov</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="?controller=nabiralnik&action=prikazi_dostope">Seznam dostopov</a>
+                </li>
             </ul>
               <?php if(isset($_SESSION['uporabnik_id'])){?>
               <ul class="navbar-nav ml-auto">

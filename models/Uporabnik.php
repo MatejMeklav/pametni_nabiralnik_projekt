@@ -97,10 +97,10 @@ class Uporabnik {
         $db = Db::getInstance();
         $admin = 0;
         $geslo_sha= sha1($geslo);
-        if ($stmt = mysqli_prepare($db, "Insert into Uporabnik (uporabnisko_ime,geslo,email) Values (?,?,?)")) {
+        if ($stmt = mysqli_prepare($db, "Insert into Uporabnik (uporabnisko_ime,geslo,email,vloga) Values (?,?,?,?)")) {
             //dodamo parametre po vrsti namesto vprašajev
             //s string, i integer ,d double, b blob
-            mysqli_stmt_bind_param($stmt, "sss",$uporabnisko_ime,$geslo_sha,$email);
+            mysqli_stmt_bind_param($stmt, "sssi",$uporabnisko_ime,$geslo_sha,$email,$admin);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
         }
