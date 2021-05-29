@@ -10,6 +10,7 @@
     <div class="card bg-light">
         <article class="card-body mx-auto" style="max-width: 400px;">
             <h4 class="card-title mt-3 text-center">Prijava</h4>
+            <?php if(isset($data['error'])){echo $data['error'];} ?>
             <form method="POST" action="?controller=uporabnik&action=prijava" >
                 <div class="form-group input-group">
                     <div class="input-group-prepend">

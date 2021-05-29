@@ -1,5 +1,6 @@
 <?php
 include "models/odpiranje.php";
+include "models/Najem.php";
 //kontroler za delo z nabiralniki
 class nabiralnik_controller {
 
@@ -56,6 +57,22 @@ class nabiralnik_controller {
         $dostopi = Odpiranje::vrniVseZidUporabnika($_SESSION['uporabnik_id']);
           require_once('views/paketniki/dnevnikDostopa.php');
 
+      }
+
+      public function dodajNabiralnik(){
+
+            if(isset($_POST['poslji'])){
+                $od=$_POST["od"];
+                $do=$_POST["do"];
+                $nabiralnik=Nabiralnik::dodaj($_POST['id'],$_POST["ime"]);
+                $id_nabiralnik= $nabiralnik-> id;
+                $id_uporabnik=$nabiralnik -> id_uporabnik;
+                Najem::insert($id_nabiralnik,$id_uporabnik, $od, $do);
+                require_once('views/strani/dodajanjePaketnika.php');
+
+            }else{
+                require_once('views/paketniki/nabiralnikDodaj.php');
+            }
       }
 }
 ?>

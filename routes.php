@@ -27,7 +27,7 @@ function call($controller, $action) {
   //slednje bi storili tako, da bi imeli več array-ev, recimo array z admin kontrolerji in akcijami in array z public akcijami
 $controllers = array('strani' => ['domov', 'napaka'],
  'uporabnik' => ['index', 'prikazi','dodaj','shrani', 'registracija','prijava','odjava','stanje'],
-    'nabiralnik' => ['index', 'prikazi','dodaj','shrani','seznam','prikazi_dostope']);
+    'nabiralnik' => ['index', 'prikazi','dodaj','shrani','seznam','prikazi_dostope','dodajNabiralnik']);
 
 
   //preverimo, če uporabnik kliče kontorler, ki sploh obstaja, torej je v našem seznamu dovoljenih klicev

@@ -45,12 +45,13 @@ class uporabnik_controller {
             //Preveri če se gesli ujemata
             if($_POST["geslo"] != $_POST["ponovi_geslo"]){
                 $error = "Gesli se ne ujemata.";
-                require_once('views/strani/neuspešnaRegistracija.php');
+                require_once('views/strani/neuspesnaRegistracija.php');
+
             }
             //Preveri ali uporabniško ime obstaja
             else if(Uporabnik::uporabnik_obstaja($_POST["uporabnisko_ime"])){
                 $error = "Uporabniško ime je že zasedeno.";
-                require_once('views/strani/neuspešnaRegistracija.php');
+                require_once('views/strani/neuspesnaRegistracija.php');
             }
             //Podatki so pravilno izpolnjeni, registriraj uporabnika
 
@@ -60,7 +61,7 @@ class uporabnik_controller {
             //Prišlo je do napake pri registraciji
             else{
                 $error = "Prišlo je do napake med registracijo uporabnika.";
-                require_once('views/strani/neuspešnaRegistracija.php');
+                require_once('views/strani/neuspesnaRegistracija.php');
 
             }
 
@@ -85,18 +86,22 @@ class uporabnik_controller {
 
     public function prijava(){
         $data=array();
+
         if(isset($_POST['uporabnisko_ime']) && isset($_POST['geslo']) ){
 
             $uporabnik=Uporabnik::prijava($_POST['uporabnisko_ime'],$_POST['geslo']);
             if($uporabnik){
                 $_SESSION['uporabnik_id']=$uporabnik->id;
                 $_SESSION['uporabnisko_ime']=$uporabnik->uporabnisko_ime;
-                header("Location: index.php");
+                $_SESSION['vloga']=$uporabnik->vloga;
+                require_once('views/strani/domov.php');
 
             }else{
                 $data['error']="Uporabnik s tem uporabniškim imenom in geslom ne obstaja";
+                require_once('views/uporabniki/prijava.php');
             }
         }else{
+
             require_once('views/uporabniki/prijava.php');
         }
     }

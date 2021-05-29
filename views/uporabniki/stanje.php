@@ -63,30 +63,10 @@ $uporabnik = get_box($id);
                     <td><?php echo $uporabnik->vloga; ?></td>
                     <td>
                                 <!-- TODO: link na dodaj paketnik -->
-                        <a href="?controller=Nabiralni&action=dodaj&user_id=<?php echo $uporabnik->id; ?>" class="btn btn-success"><i class="fa fa-pencil-square"></i> dodaj nabiralnik</a>
-                        <a  data-toggle="modal" data-target="#myModal" class="btn btn-danger"><i class="fas fa-user-times"></i> Odstrani uporabnika</a>
-
+                        <a href="?controller=nabiralnik&action=dodajNabiralnik&user_id=<?php echo $uporabnik->id; ?>" class="btn btn-success"><i class="fa fa-archive"></i> dodaj nabiralnik</a>
                     </td>
                 </tr>
             <?php } ?>
         </tbody>
     </table>
-</div>
-
-<div class="modal" id="myModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Potrditev brisanja</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="myFunction()" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Ste prepričani, da želite izbrisati uporabnika?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" aria-label="Close" class="btn btn-secondary" onclick="myFunction()" data-bs-dismiss="modal">Prekliči</button>
-                <a href="?controller=uporabnik&action=delete&user_id=<?php echo $uporabnik->id; ?>" class="btn btn-danger"><i class="fas fa-user-times"></i> Izbriši</a>
-            </div>
-        </div>
-    </div>
 </div>

@@ -2,104 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2364579d-4df1-4b62-a1e0-1f384a18bd55" name="Default Changelist" comment="Access times table added and api call from android app(When box is opened)">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Odpiranje.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/add_vhost.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/api2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/connection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/controllers - Shortcut.lnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/controllers/oglasi_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/controllers/strani_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/controllers/uporabnik_controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/komentar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/models/oglasi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/models/strani.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/models/uporabnik.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/oglas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/routes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/vaja2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/layout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/oglasi/dodaj.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/oglasi/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/oglasi/prikazi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/oglasi/prikaziKomentar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/oglasi/uredi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/oglasi/uspesnoDodal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/strani/domov.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/strani/napaka.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/uporabnik/add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/uporabnik/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/uporabnik/list.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/uporabnik/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/uporabnik/profile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/views/uporabnik/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_czech.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_english.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_french.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_hellenic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_macedonian.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_portuguese.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_romanian.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_spanish.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/add_vhost_turkish.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_czech.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_english.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_french.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_hellenic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_macedonian.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_portuguese.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_romanian.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_spanish.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wamplangues/index_turkish.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/gifLogo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/gifLogo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/gifLogo1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/pngFolder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/pngFolderGo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/pngPlugin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/img/pngWrench.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/classic/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/generator_config.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/rationale-regular-demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/rationale-regular-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/rationale-regular-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/rationale-regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/rationale-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/rationale-regular-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/specimen_files/easytabs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/specimen_files/grid_12-825-55-15.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/specimen_files/specimen_stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/fonts/webfontkit-20150426-043002.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/bg-begin-repeat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/bg-dl-repeat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/bg-header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/bg-title-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/bg-wall-repeat.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/divider.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/pngFolder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/pngFolderGo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/pngPlugin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/img/pngWrench.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/modern/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/no-style/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/wampthemes/simple/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/naloga2/www.rar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/paketniki/dnevnikDostopa.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/connection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Najem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/paketniki/nabiralnikDodaj.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/strani/dodajanjePaketnika.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/nabiralnik_controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/nabiralnik_controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/uporabnik_controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/uporabnik_controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Nabiralnik.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Nabiralnik.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Uporabnik.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Uporabnik.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/paketniki/seznam.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/paketniki/seznam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/strani/neuspešnaRegistracija.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/strani/neuspesnaRegistracija.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uporabniki/prijava.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uporabniki/prijava.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/uporabniki/stanje.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uporabniki/stanje.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +74,7 @@
       <workItem from="1622134367728" duration="3776000" />
       <workItem from="1622150384532" duration="9308000" />
       <workItem from="1622231920079" duration="358000" />
-      <workItem from="1622232294099" duration="887000" />
+      <workItem from="1622232294099" duration="12148000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1620406784591</created>
@@ -237,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622232349308</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Access times table added and api call from android app(When box is opened)">
+      <created>1622233201854</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622233201854</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

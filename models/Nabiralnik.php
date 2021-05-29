@@ -67,7 +67,6 @@ class Nabiralnik {
 
         //primer query-a s prepared statementom
 
-
         if ($stmt = mysqli_prepare($db, "Insert into nabiralnik (id_uporabnik,ime) Values (?,?)")) {
             //dodamo parametre po vrsti namesto vprašajev
             //s string, i integer ,d double, b blob
@@ -101,6 +100,8 @@ class Nabiralnik {
         $result = mysqli_query($db,"DELETE FROM nabiralnik WHERE id=$id_nabiralnik");
         //result, lahko preverimo uspešnost poizvedbe;
     }
+
+
 
 }
 ?>

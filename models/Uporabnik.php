@@ -11,13 +11,15 @@ class Uporabnik {
   public $uporabnisko_ime;
   public $geslo;
   public $email;
+  public $vloga;
 
   //konstruktor
-  public function __construct($id, $uporabnisko_ime, $geslo,$email) {
+  public function __construct($id, $uporabnisko_ime, $geslo,$email, $vloga) {
     $this->id = $id;
     $this->uporabnisko_ime  = $uporabnisko_ime;
     $this->geslo = $geslo;
     $this->email=$email;
+    $this->vloga=$vloga;
   }
 
 
@@ -31,7 +33,7 @@ class Uporabnik {
 
 //v zanki ustvarjamo nove objekte in jih dajemo v seznam
     while($row = mysqli_fetch_assoc($result)){
-      $list[] = new Uporabnik($row['id'], $row['uporabnisko_ime'], $row['geslo'],$row['email']);
+      $list[] = new Uporabnik($row['id'], $row['uporabnisko_ime'], $row['geslo'],$row['email'],$row['vloga']);
     }
     
     //vrnemo list objektov/uporabnikov
@@ -48,7 +50,7 @@ class Uporabnik {
     $db = Db::getInstance();
     $result = mysqli_query($db,"SELECT * FROM uporabnik where id=$id");
     $row = mysqli_fetch_assoc($result);
-    return new Uporabnik($row['id'], $row['uporabnisko_ime'], $row['geslo'],$row['email']);
+    return new Uporabnik($row['id'], $row['uporabnisko_ime'], $row['geslo'],$row['email'],$row['vloga']);
   }
   
 
@@ -85,7 +87,7 @@ class Uporabnik {
         if(!$row){
             return false;
         }else{
-            return new Uporabnik($row['id'], $row['uporabnisko_ime'], $row['geslo'],$row['email']);
+            return new Uporabnik($row['id'], $row['uporabnisko_ime'], $row['geslo'],$row['email'],$row['vloga']);
         }
 
     }
@@ -95,15 +97,20 @@ class Uporabnik {
         error_reporting(E_ALL);
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
         $db = Db::getInstance();
-        $admin = 0;
+        $returnVal=0;
+        $admin=0;
         $geslo_sha= sha1($geslo);
         if ($stmt = mysqli_prepare($db, "Insert into Uporabnik (uporabnisko_ime,geslo,email,vloga) Values (?,?,?,?)")) {
             //dodamo parametre po vrsti namesto vprašajev
             //s string, i integer ,d double, b blob
             mysqli_stmt_bind_param($stmt, "sssi",$uporabnisko_ime,$geslo_sha,$email,$admin);
-            mysqli_stmt_execute($stmt);
+            if(mysqli_stmt_execute($stmt)){
+                $returnVal=1;
+            }
             mysqli_stmt_close($stmt);
         }
+
+        return $returnVal;
 
     }
 

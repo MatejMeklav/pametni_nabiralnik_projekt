@@ -38,15 +38,21 @@
                 <a class="nav-link" href="index.php">Domov</a>
               </li>
               <!-- primer označevanja aktivnih elementov v meniju, ko je opcija/kontroler izbran -->
+                <?php if(isset($_SESSION['vloga'])&&$_SESSION['vloga']==1){?>
               <li class="nav-item">
                 <a class="nav-link" href="?controller=uporabnik&action=stanje">Seznam uporabnikov</a>
               </li>
+                    <?php
+                }?>
+                <?php if(isset($_SESSION['uporabnik_id'])){?>
                 <li class="nav-item">
                     <a class="nav-link" href="?controller=nabiralnik&action=seznam">Seznam paketnikov</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="?controller=nabiralnik&action=prikazi_dostope">Seznam dostopov</a>
                 </li>
+                    <?php
+                }?>
             </ul>
               <?php if(isset($_SESSION['uporabnik_id'])){?>
               <ul class="navbar-nav ml-auto">

@@ -3,8 +3,10 @@ function get_all()
 {
     global $conn;
 
-    $query = "SELECT najem.*, uporabnik.uporabnisko_ime FROM najem 
-            LEFT JOIN uporabnik ON uporabnik.id = najem.id_uporabnik";
+    $query = "SELECT najem.*, uporabnik.uporabnisko_ime, nabiralnik.ime FROM najem 
+            LEFT JOIN uporabnik ON uporabnik.id = najem.id_uporabnik
+            LEFT JOIN nabiralnik ON nabiralnik.id = najem.id_nabiralnik";
+
 
     $res = $conn->query($query);
     $paketniki = array();
@@ -48,6 +50,7 @@ $paketnik = get_user($id);
             <tr>
                 <th>ID</th>
                 <th>Uporabniško ime</th>
+                <th>Ime paketnika</th>
                 <th>Najem od</th>
                 <th>Najem do</th>
                 <th>&nbsp;</th>
@@ -58,6 +61,7 @@ $paketnik = get_user($id);
                 <tr>
                     <td><?php echo $paketnik->id; ?></td>
                     <td><?php echo $paketnik->uporabnisko_ime; ?></td>
+                    <td><?php echo $paketnik->ime; ?></td>
                     <td><?php echo $paketnik->najem_od; ?></td>
                     <td><?php echo $paketnik->najem_do; ?></td>
                 </tr>
