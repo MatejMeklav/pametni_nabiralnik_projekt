@@ -18,6 +18,26 @@ function get_all()
 
     return $paketniki;
 }
+function get_user_packages($id_uporabnik){
+    global $conn;
+
+    $query = "SELECT najem.*, uporabnik.uporabnisko_ime, nabiralnik.ime FROM najem 
+            LEFT JOIN uporabnik ON uporabnik.id = najem.id_uporabnik
+            LEFT JOIN nabiralnik ON nabiralnik.id = najem.id_nabiralnik
+            WHERE najem.id_uporabnik=$id_uporabnik";
+
+
+    $res = $conn->query($query);
+    $paketniki = array();
+
+    while($paketnik = $res->fetch_object())
+    {
+        array_push($paketniki, $paketnik);
+    }
+
+    return $paketniki;
+
+}
 function get_user($id)
 {
     global $conn;
@@ -36,8 +56,13 @@ function get_user($id)
 
     return null;
 }
-$paketniki = get_all();
 $id = $_SESSION["uporabnik_id"];
+if(isset($_SESSION['vloga'])&&$_SESSION['vloga']==1){
+    $paketniki = get_all();
+}else{
+    $paketniki =get_user_packages($id);
+
+}
 $paketnik = get_user($id);
 
 ?>

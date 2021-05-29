@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2364579d-4df1-4b62-a1e0-1f384a18bd55" name="Default Changelist" comment="Access times table added and api call from android app(When box is opened)">
-      <change afterPath="$PROJECT_DIR$/models/Najem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/paketniki/nabiralnikDodaj.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/strani/dodajanjePaketnika.php" afterDir="false" />
+    <list default="true" id="2364579d-4df1-4b62-a1e0-1f384a18bd55" name="Default Changelist" comment="Bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/nabiralnik_controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/nabiralnik_controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/uporabnik_controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/uporabnik_controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Nabiralnik.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Nabiralnik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Uporabnik.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Uporabnik.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/paketniki/seznam.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/paketniki/seznam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/strani/neuspešnaRegistracija.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/strani/neuspesnaRegistracija.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/uporabniki/prijava.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uporabniki/prijava.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/uporabniki/stanje.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/uporabniki/stanje.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +63,7 @@
       <workItem from="1622134367728" duration="3776000" />
       <workItem from="1622150384532" duration="9308000" />
       <workItem from="1622231920079" duration="358000" />
-      <workItem from="1622232294099" duration="12148000" />
+      <workItem from="1622232294099" duration="13745000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1620406784591</created>
@@ -160,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622233201854</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Bugfix">
+      <created>1622315404572</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1622315404572</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +186,7 @@
     <MESSAGE value="test(uporabnik controller)" />
     <MESSAGE value="Register bugfix" />
     <MESSAGE value="Access times table added and api call from android app(When box is opened)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Access times table added and api call from android app(When box is opened)" />
+    <MESSAGE value="Bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bugfix" />
   </component>
 </project>
