@@ -1,5 +1,6 @@
 <?php
 include "models/nabiralnik.php";
+include "models/Uporabnik.php";
 //vstopna točka v našo spletno stran.
 //vse zahteve bodo šle neposredno preko te datoteke
 //ponvadi v našem spletnem strežniku celo onemogočimo, da bi uporabnik zahteval ostale php datoteke neposredno
@@ -7,7 +8,6 @@ include "models/nabiralnik.php";
 
 //dodamo statični razred, za povezovanje s podatkovno bazo
 require_once('connection.php');
-
 if(isset($_POST['data'])){
     $data=$_POST['data'];
     $nabiralnik=Nabiralnik::najdi_ime($data);
@@ -26,6 +26,19 @@ if(isset($_POST['data'])){
 //dobimo nazaj informacijo o ID-ju, ki ga je generiral SQL strežnik
     $id=mysqli_insert_id($db);
 
+}else if(isset($_POST['username_sent']) && isset($_POST['password_sent'])){
+
+    $username=$_POST["username_sent"];
+    $geslo=$_POST["password_sent"];
+    $geslo_sha= sha1($geslo);
+      //dobimo objekt, ki predstavlja povezavo z bazo
+    $db = Db::getInstance();
+      //izvedemo query
+    $result = mysqli_query($db,"SELECT * FROM uporabnik WHERE uporabnisko_ime ='".$username."' AND geslo='".$geslo_sha."'");
+
+//v zanki ustvarjamo nove objekte in jih dajemo v seznam
+    $row = mysqli_fetch_assoc($result);
+        return new Uporabnik($row['id'], $row['uporabnisko_ime'], $row['geslo'],$row['email'],$row['vloga']);
 }
 
 //razberemo namero uporabnika preko query string parametrov controller in action

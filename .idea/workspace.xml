@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2364579d-4df1-4b62-a1e0-1f384a18bd55" name="Default Changelist" comment="Bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/connection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/paketniki/seznam.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/paketniki/seznam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,9 @@
       <workItem from="1622134367728" duration="3776000" />
       <workItem from="1622150384532" duration="9308000" />
       <workItem from="1622231920079" duration="358000" />
-      <workItem from="1622232294099" duration="13745000" />
+      <workItem from="1622232294099" duration="14406000" />
+      <workItem from="1622455582788" duration="1231000" />
+      <workItem from="1622981341856" duration="8320000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1620406784591</created>
@@ -156,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622315404572</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Bugfix">
+      <created>1622316799222</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1622316799222</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
